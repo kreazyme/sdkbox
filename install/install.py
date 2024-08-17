@@ -3,7 +3,7 @@
 
 import os
 import sys
-import urllib2
+import urllib.request
 import json
 import hashlib
 import platform
@@ -26,7 +26,7 @@ class Utils:
     @staticmethod
     def curl(url, destination=None, chunk_size=None, callback=None):
         try:
-            response = urllib2.urlopen(url)
+            response = urllib.request.urlopen(url)
             content_length = 0
             if(response.headers.has_key('content-length')):
                     content_length = response.headers['content-length']
@@ -403,8 +403,8 @@ def check_country_code_by_net():
     try:
         headers = { 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.3'}
         url = 'http://ip-api.com/json/'
-        req = urllib2.Request(url, headers=headers)
-        response = urllib2.urlopen(req)
+        req = urllib.request.Request(url, headers=headers)
+        response = urllib.request.urlopen(req)
         page = response.read()
         ret = json.loads(page)
         country_code = ret['countryCode'].upper()
