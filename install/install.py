@@ -56,7 +56,7 @@ class Utils:
             f.write(data)
             f.close()
         if None != callback:  # the cursor flyback needs a blank line after
-            print ''
+            print ('')
         return data
 
     @staticmethod
@@ -66,9 +66,9 @@ class Utils:
         off = width - on
         s = '[' + on * '#' + off * ' ' + '] ' + str(perc) + '%'
         if Utils.platform() == Utils.PLATFORM_WINDOWS:
-            print s + '\r',
+            print (s + '\r'),
         else:
-            print s + '\033[1A'
+            print (s + '\033[1A')
 
     @staticmethod
     def create_dir_if(path):
