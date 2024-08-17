@@ -272,7 +272,7 @@ class Env(object):
             if not value:
                 raise Exception('environment variable %s is not exist' % key)
             return value
-        except Exception, e:
+        except Exception:
             # variable not exist, use another way to search
             pass
 
