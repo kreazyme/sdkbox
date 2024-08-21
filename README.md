@@ -1,3 +1,6 @@
+> [!WARNING]
+> This installer is not working because the [Download page](https://download.sdkbox.com/) is down
+
 # Intro
 SDKBOX doc site uses [mkdocs](http://www.mkdocs.org) to generate static pages from markdown files
 
